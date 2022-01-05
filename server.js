@@ -5,6 +5,8 @@ const app = express();
 import userAuthRoute from "./routes/userAuthRoute.js";
 dotenv.config();
 connectDB();
+app.set("view engine", "ejs");
+app.use(express.static("public"));
 app.use(express.json());
 app.use("/", userAuthRoute);
 

@@ -19,11 +19,11 @@ const handlerror = (err) => {
 };
 
 const LoginGet = (req, res) => {
-  res.send("welcome from login");
+  res.render("login");
 };
 
 const SignUpGet = (req, res) => {
-  res.send("welcome form signup get");
+  res.render("index");
 };
 const SignUpPost = async (req, res) => {
   const { email, password } = req.body;
